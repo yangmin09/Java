@@ -1,0 +1,13 @@
+target/
+.project
+.classpath
+.settings/
+.DS_Store
+*.swp
+*~
+MANIFEST.MF
+*.iml
+*.ipr
+*.iws
+*.idea
+*.pid
