@@ -9,6 +9,13 @@ MANIFEST.MF
 *.iml
 *.ipr
 *.iws
-*.idea
+.idea/
 *.pid
 
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+out
+gen

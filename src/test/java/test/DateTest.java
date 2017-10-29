@@ -22,5 +22,19 @@ public class DateTest {
 
 
 }
+interface B {
+
+
+}
+
+
+
+class A implements B{
+    <T extends String> void init(T t) {
+
+    }
+}
+class C extends A implements B
+{}
 
 
