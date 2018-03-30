@@ -119,11 +119,36 @@ public class BatchInsertGenerator {
 
 		return cpaSB.toString();
 	}
+
+
+	static String buildOdpsBatchInsert() throws Exception {
+
+		StringBuilder odpsSB = new StringBuilder();
+		odpsSB.append("insert into table s_ae_seo_category_search_seed  values ");
+		String cpaValue = "(\'%s\')";
+		File file = new File("/Users/yangmin/Documents/Java/personal/UsefulTools/src/main/java/sqlGenerator/1.txt");
+		FileInputStream fileInputStream = new FileInputStream(file);
+		InputStreamReader reader = new InputStreamReader(fileInputStream, "UTF-8");
+		BufferedReader bufferedReader = new BufferedReader(reader);
+		String line;
+		int count = 0;
+		while ((line = bufferedReader.readLine()) != null) {
+			if (count != 0) {
+				odpsSB.append(",");
+			}
+			String txt = String.format(cpaValue, line.trim());
+			odpsSB.append(txt);
+			count += 1;
+		}
+
+
+		return odpsSB.toString();
+	}
 	public static void main(String[] args) throws Exception {
 //		String[] strs = buildCpiBatchInsert();
 //		System.out.println(strs[0]);
 //		System.out.println(strs[1]);
-		String str=buildCpiScoreBatchInsert();
+		String str=buildOdpsBatchInsert();
 		System.out.println(str);
 
 	}

@@ -105,6 +105,7 @@
             <groupId>com.alibaba.trip.tripspider</groupId>
             <artifactId>tripspider-sdk</artifactId>
             <version>1.0.0-SNAPSHOT</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
