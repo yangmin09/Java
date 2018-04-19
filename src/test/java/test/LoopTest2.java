@@ -1,5 +1,7 @@
 package test;
 
+import java.net.URLEncoder;
+
 /**
  * @author yangmin
  * @email ym99929@alibaba-inc.com
@@ -9,9 +11,10 @@ package test;
 public class LoopTest2 {
 
 	public static void main(String[] args) throws InterruptedException{
-		while(true){
-			System.out.println("test2");
-			Thread.sleep(1000);
-		}
+		//while(true){
+		//	System.out.println("test2");
+		//	Thread.sleep(1000);
+		//}
+		System.out.println(URLEncoder.encode("mp3%2Bplayer"));
 	}
 }
